@@ -1,0 +1,537 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %>Dashboard</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <link rel="stylesheet" href="~/Content/bootstrap.css" />
+    <link rel="stylesheet" href="~/Content/Site.css" />
+    <link rel="stylesheet" href="~/Content/dist/css/AdminLTE.min.css" />
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/Content/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="~/Content/font-awesome/css/style.css" />
+
+    <!-- Toast -->
+    <link rel="stylesheet" href="~/Content/plugins/toast/toastr.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="Content/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="Content/font-awesome/css/style.css" />
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="Content/bootstrap.css" />
+    <link rel="stylesheet" href="Content/Custom.css" />
+
+    <!-- Datepicker -->
+    <link rel="stylesheet" href="Content/plugins/datepicker/datepicker3.css" />
+
+    <!-- Datatable -->
+    <link rel="stylesheet" href="Content/plugins/datatables/dataTables.bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.css">
+
+    <!-- Toast -->
+    <link rel="stylesheet" href="Content/plugins/toast/toastr.css" />
+
+    <!-- Bootstrap toogle -->
+    <link rel="stylesheet" href="Content/plugins/bootstrap-toggle/bootstrap-toggle.css" />
+
+    <!-- Bootstrap select -->
+    <link rel="stylesheet" href="Content/plugins/bootstrap-select/bootstrap-select.css" />
+
+    <!-- Autocomplete Search -->
+    <link rel="stylesheet" href="Content/plugins/AutoComplete/jQueryUI-AutoComplete.css" />
+
+    <!-- Roboto FOnt -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+    <%--font awesome--%>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Roboto, sans-serif;
+        }
+
+        header {
+            position: fixed;
+            background: #22242A;
+            padding: 20px;
+            width: 100%;
+            height: 30px;
+        }
+
+        .left_area h3 {
+            color: #fff;
+            margin: 0;
+            text-transform: uppercase;
+            font-size: 22px;
+            font-weight: 900;
+
+        }
+
+        .left_area span {
+            color: #1DC4e7;
+
+        }
+
+        .logout_btn {
+            padding: 5px;
+            background: #1983D3;
+            text-decoration: none;
+            float: right;
+            margin-top: -30px;
+            margin-right: 40px;
+            border-radius: 2px;
+            font-size: 15px;
+            font-weight: 600;
+            color: #fff;
+            transition-property: background;
+        }
+
+        .logout_btn:hover {
+            background: #0d9db8;
+        }
+
+        .sidebar {
+            background: #2f323a;
+            margin-top: 70px;
+            padding-top: 30px;
+            position: fixed;
+            left: 0;
+            width: 250px;
+            height: 100%;
+        }
+
+        #bgColor {
+            top: 0px;
+            left: 0px;
+            width: 20px;
+            height: 1280px;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            box-shadow: 2px 0px 4px #00000012;
+            opacity: 1;
+        }
+        .topnav {
+            overflow: hidden;
+            top: 0px;
+            left: 56px;
+            /*width: 1224px;*/
+            height: 56px;
+            background: #1D2567 0% 0% no-repeat padding-box;
+            opacity: 1;
+            display: flex;
+            /*position: relative;*/
+        }
+
+        .topnav a {
+          float: left;
+          color: #f2f2f2;
+          text-align: center;
+          padding: 5px 80px 25px 43px;
+          text-decoration: none;
+          font-size: 17px;
+        }
+
+        .topnav p {
+            float: left;
+             color: #f2f2f2;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 17px;
+        }
+
+        .topnav a:hover {
+          /*background-color: #ddd;*/
+          color: black;
+          cursor: pointer;
+        }
+
+        .topnav a.active {
+          background-color: #04AA6D;
+          color: white;
+        }
+
+        .globeImg {
+            padding-top: 14px;
+            /*margin-right: 500px;*/
+        }
+
+        .askImg {
+            padding-top: 16px;
+            margin-left: 900px;
+        }
+
+        p#en {
+            font-family: 'Helvetica Neue LT Std';
+            font-size: 14px;
+            margin-top: 2px;
+            color: white;
+        }
+
+        #geserKiri {
+            margin-left: 1330px;
+            position: absolute;
+            /*text-align: center;*/
+        }
+
+        #geserKiri1 {
+            padding-top: 15px;
+            margin-left: 260px;
+        }
+
+        .sidebar1 {
+            /* Layout Properties */
+            top: 0px;
+            left: 0px;
+            width: 240px;
+            height: 800px;
+            /* UI Properties */
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            box-shadow: 2px 0px 4px #00000012;
+            opacity: 1;
+            /*position: relative;*/
+        }
+
+        .main {
+            margin-left: 160px; /* Same as the width of the sidenav */
+            font-size: 28px; /* Increased text to enable scrolling */
+            padding: 0px 10px;
+        }
+
+        #text1 {
+            font-family: 'Helvetica Neue LT Std';
+            font-weight: bold;
+            font-size: 20px;
+            color: #1A2268;
+            /*padding-left: 32px;*/
+            margin-bottom: 10px;
+            /*position: center;*/
+            /*padding-bottom: 10px;*/
+        }
+
+        #textSu {
+            font-family: 'Helvetica Neue LT Std';
+            font-weight: bold;
+            font-size: 20px;
+            color: #4D9B35;
+            /*padding-left: 24px;*/
+            /*padding-bottom: 10px;*/
+        }
+
+        #lasaMed {
+            font-family: 'Helvetica Neue LT Std';
+            font-weight: bold;
+            font-size: 14px;
+            /*padding-left: 10px;*/
+            color: #1A2268;
+        }
+
+        .imgMed {
+            /*padding-left: 16px;*/
+            padding-bottom: 4px;
+        }
+
+        .imgMed:hover {
+            background-color: #D6DBFF;
+            color: blue;
+        }
+
+        a#lasaMed {
+            text-decoration: none;
+        }
+
+
+        #group1 {
+            font-family: 'Helvetica Neue LT Std';
+            font-weight: bold;
+            font-size: 14px;
+            /*padding-left: 10px;*/
+            color: #1A2268;
+        }
+
+        .imgGroup {
+            /*padding-left: 16px;*/
+            /*padding-left: -14px;*/
+            /*text-align: center;*/
+            /*padding-top: 4px;*/
+            padding-top: 0;
+        }
+
+        .imgGroup:hover {
+            background-color: #D6DBFF;
+            color: blue;
+        }
+
+        a#group1 {
+            text-decoration: none;
+        }
+
+        #group2 {
+            font-family: 'Helvetica Neue LT Std';
+            font-weight: bold;
+            font-size: 14px;
+            /*padding-left: 10px;*/
+            color: #1A2268;
+        }
+
+        .imgGroup2{
+            /*padding-top:2px;*/
+            padding-top: 0;
+        }
+
+        .imgGroup2:hover {
+            background-color: #D6DBFF;
+            color: blue;
+        }
+
+        a#group2 {
+            text-decoration: none;
+        }
+
+        .photoProfile {
+            /* Layout Properties */
+            top: 12px;
+            left: 1076px;
+            width: 32px;
+            height: 32px;
+            /* UI Properties */
+            background: transparent url('img/A.png') 0% 0% no-repeat padding-box;
+            opacity: 1;
+        }
+
+        .burgerBar {
+            top: 20px;
+            left: 259px;
+            width: 18px;
+            height: 16px;
+            opacity: 1;
+        }
+
+        #sidebarTop {
+            padding-top: 18px;
+            /*top: 0;*/
+            /*padding-bottom: 18px;*/
+        }
+    </style>
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                 <asp:ScriptReference Path="~/Content/plugins/datepicker/moment.js" />
+                <asp:ScriptReference Path="~/Content/plugins/datepicker/bootstrap-datepicker.js" />
+                <asp:ScriptReference Path="~/Content/plugins/datatables/jquery.dataTables.min.js" />
+                <asp:ScriptReference Path="~/Content/plugins/datatables/dataTables.bootstrap.min.js" />
+                <asp:ScriptReference Path="~/Content/plugins/toast/toastr.min.js" />
+                <asp:ScriptReference Path="~/Content/plugins/bootstrap-toggle/bootstrap-toggle.min.js" />
+                <asp:ScriptReference Path="~/Content/plugins/bootstrap-select/bootstrap-select.js" />
+                <asp:ScriptReference Path="~/Content/plugins/AutoComplete/jQueryUI-AutoComplete.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+
+
+
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+        <div class="topnav">
+            <div id="geserKiri1">
+                <div class="d-inline" style="cursor: pointer;" id="main" onclick="Nav();">
+                    <i class="fa-solid fa-bars burgerBar closebtn" style="color: white;"></i>                
+                </div>                
+                <%--<span class="shrinkButton">
+                    <i class='bx bx-chevron-left' style="color: white;"></i>
+                </span>--%>
+                <%--<div class="d-inline" style="font-size: 14px;  font-family: 'Helvetica Neue LT Std'; font-weight: bold; color: white;">
+                    Tuesday, 21 November 2021
+                </div>--%>
+                <div id="date" class="d-inline" style="font-size: 14px; font-family: 'Helvetica Neue LT Std'; font-weight: bold; color: white;">
+
+                </div>
+            </div>
+            <div id="geserKiri" >
+                <div class="d-inline" style="margin-left: 12px;">
+                    <img src="<%= Page.ResolveClientUrl("~/Assets/img/icon-ask.svg") %>" alt="Alternate Text" />
+                </div>
+                <div class="d-inline" >
+                    <img src="<%= Page.ResolveClientUrl("~/Assets/img/icon-globe.svg") %>"alt="Alternate Text" />
+                </div>
+                    <div class="d-inline" style="font-size: 14px; font-family: 'Helvetica Neue LT Std'; font-weight: bold; color: white;">
+                        EN
+                    </div>
+
+                <%--<div id="profile"></div>--%>
+                <div class="dropdown d-inline">                   
+                    
+                    <div class="d-inline" style="cursor: pointer" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      
+
+                        <div class="d-inline" style="padding-left: 20px; font-size: 14px; font-family: 'Helvetica Neue LT Std'; font-weight: bold; color: white;">
+                            <img src="<%= Page.ResolveClientUrl("~/Assets/img/img_avatar2.jpg") %>" style="width: 10% !important;" class="img-fluid mr-2 rounded-circle"  alt="Profile Image" />
+                            <asp:Label runat="server" ID="lblUsername"> Username </asp:Label>
+                        </div>
+                        <div class="d-inline">
+                            <img src="<%= Page.ResolveClientUrl("~/Assets/img/panah.svg") %>" alt="Alternate Text" />
+                        </div>
+                        <%--<asp:LinkButton Text="Logout" OnClick="LinkButtonLogout_Click" runat="serve/>--%>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="height: 60px; width: 210px;">
+                     
+                          <%-- <asp:LinkButton class="dropdown-item text-danger" ID="LinkButtonLogout" runat="server" OnClick="LinkButtonLogout_Click">
+                                    <i class="fas fa-sign-out-alt"></i> Logout
+                                 </asp:LinkButton>--%>
+                <%--<asp:LinkButton Text="Logout" OnClick="LinkButtonLogout_Click" runat="server" />--%>
+                            <div class="dropdown-item text-center" style="padding: 5px 80px 23px 25px">
+                                <a href="javascript:;" onclick="CallButtonEvent()" class="text-danger" ><i class="fas fa-sign-out-alt" ></i>Logout</a>
+                            </div>
+                                    <%--<i href="javascript:;" onclick="CallButtonEvent()" class="fas fa-sign-out-alt"></i> Logout--%>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sidebarTop" class="sidebar1 main-sidebar sidebar-style-2 sidebarToggle" tabindex="1" style="overflow: hidden; outline: none;">
+            <aside id="sidebar-wrapper">
+                <div class="d-inline">
+                    <img src="<%= Page.ResolveClientUrl("~/Assets/img/logo-aplikasi.png") %>" alt="Alternate Text" />
+                </div>
+                <span id="text1" style="margin-bottom: 20px;" class="d-inline hiddenText">
+                    Siloam <span id="textSu" class="d-inline hiddenText"> Hospital</span>
+                </span>
+                <a href="#" id="lasaMed"">
+                    <div class="imgMed mb-2 mt-4">
+                        <img src="<%= Page.ResolveClientUrl("~/Assets/img/medicine.svg") %>" class="ml-3 mr-2" alt="Alternate Text" />
+                        <span class="hiddenText">LASA Medication List
+                        </span>
+                    </div>
+                </a>
+
+                <a href="#" id="group1">
+                    <div class="imgGroup mb-2 mt-4">
+                        <img src="<%= Page.ResolveClientUrl("~/Assets/img/iconz_remove.png") %>" class="mr-2" alt="Alternate Text" />
+                        <span class="hiddenText">
+                            Another Menu 1
+                        </span>
+                    </div>
+                </a>
+
+                <a href="#" id="group2">
+                    <div class="imgGroup2 mb-2 mt-4">
+                        <img src="<%= Page.ResolveClientUrl("~/Assets/img/iconz_remove.png") %>" class="mr-2" alt="Alternate Text" />
+                        <span class="hiddenText">
+                            Another Menu 2
+                        </span>
+                    </div>
+                </a>
+                <%--TEST--%>
+                <asp:Button ID="btnSubmit" Text="Submit" runat="server" OnClick="LinkButtonLogout_Click" hidden/>
+                <%--<a id = "lnk" href = "javascript:;" onclick = "CallButtonEvent()">Call Button Event</a>--%>
+                <%--<asp:Button ID="Button1" Text="Submit" runat="server" OnClick="LinkButtonLogout_Click" />--%>
+            <%--<a id="lnk" href="javascript:;">Call Button Event</a>--%>
+
+            </aside>
+        </div>
+        <div id="whitebox" class="container body-content" style="width: auto; max-width: 100%; margin-left: 250px;">
+            <asp:ContentPlaceHolder ID="DashboardContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+            <script>
+                let isOpen = true;
+                function Nav() {
+                    if (isOpen) {
+                        closeNav();
+                        isOpen = false;
+                        console.log("tutup");
+                    }
+                    else {
+                        openNav();
+                        isOpen = true;
+                        console.log("buka");
+
+                    }
+                }
+                function closeNav() {
+                    document.getElementById("sidebarTop").style.width = "50px";
+                    document.getElementById("geserKiri1").style.marginLeft = "70px";
+                    //document.getElementById("box1").style.width = "1400px";
+                    document.getElementById("whitebox").style.marginLeft = "50px";
+                    //document.getElementById("box1").style.width = "1600px";
+                    console.log("TEST");
+                    $(".hiddenText").prop("hidden", true)
+                    $("#text1").html('');
+                }
+
+                function openNav() {
+                    document.getElementById("sidebarTop").style.width = "229px";
+                    document.getElementById("geserKiri1").style.marginLeft = "250px";
+                    $(".menuText").prop('hidden', false);
+                    $("#text1").html('Nama <div id="textSu" class= "d-inline"> Aplikasi</div >');
+                    document.getElementById("whitebox").style.marginLeft = "239px";
+                    console.log("TEST 2");
+                    $(".hiddenText").prop("hidden", false)
+
+
+
+                }
+
+                //$(function () {
+                //    $("#lnk").click(function () {
+                //        $("[id*=LinkButtonLogout]").click();
+                //    });
+                //});
+
+                function CallButtonEvent() {
+                    document.getElementById("<%=btnSubmit.ClientID %>").click();
+                }
+
+                const namaBulan = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "Oktober", "November", "December"];
+                const namaHari = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                var dateObj = new Date();
+                var day = namaHari[dateObj.getDay()];
+                var month = namaBulan[dateObj.getMonth()];
+                var date = dateObj.getDate();
+                var year = dateObj.getFullYear();
+
+                document.getElementById('date').innerHTML = day + "," + ' ' + date + ' ' + month + ' ' + year;
+
+
+            </script>
+        <%--Data Tables--%>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.js"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.4/dist/sweetalert2.all.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.4/dist/sweetalert2.min.js"></script>
+
+       
+    </form>
+    
+</body>
+</html>

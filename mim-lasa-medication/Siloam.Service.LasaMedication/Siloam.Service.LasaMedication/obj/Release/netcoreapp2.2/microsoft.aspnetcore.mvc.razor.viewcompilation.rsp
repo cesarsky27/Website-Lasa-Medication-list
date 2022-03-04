@@ -1,0 +1,12 @@
+F:\Project Siloam\Lasa Medication\mim-lasa-medication\Siloam.Service.LasaMedication\Siloam.Service.LasaMedication
+--output-path=obj\Release\netcoreapp2.2\
+--application-name=Siloam.Service.LasaMedication
+--content-root=F:\Project Siloam\Lasa Medication\mim-lasa-medication\Siloam.Service.LasaMedication\Siloam.Service.LasaMedication
+--file=F:\Project Siloam\Lasa Medication\mim-lasa-medication\Siloam.Service.LasaMedication\Siloam.Service.LasaMedication\Pages\Error.cshtml
+--file=F:\Project Siloam\Lasa Medication\mim-lasa-medication\Siloam.Service.LasaMedication\Siloam.Service.LasaMedication\Pages\Index.cshtml
+--file=F:\Project Siloam\Lasa Medication\mim-lasa-medication\Siloam.Service.LasaMedication\Siloam.Service.LasaMedication\Pages\Privacy.cshtml
+--file=F:\Project Siloam\Lasa Medication\mim-lasa-medication\Siloam.Service.LasaMedication\Siloam.Service.LasaMedication\Pages\Shared\_CookieConsentPartial.cshtml
+--file=F:\Project Siloam\Lasa Medication\mim-lasa-medication\Siloam.Service.LasaMedication\Siloam.Service.LasaMedication\Pages\Shared\_Layout.cshtml
+--file=F:\Project Siloam\Lasa Medication\mim-lasa-medication\Siloam.Service.LasaMedication\Siloam.Service.LasaMedication\Pages\Shared\_ValidationScriptsPartial.cshtml
+--file=F:\Project Siloam\Lasa Medication\mim-lasa-medication\Siloam.Service.LasaMedication\Siloam.Service.LasaMedication\Pages\_ViewImports.cshtml
+--file=F:\Project Siloam\Lasa Medication\mim-lasa-medication\Siloam.Service.LasaMedication\Siloam.Service.LasaMedication\Pages\_ViewStart.cshtml

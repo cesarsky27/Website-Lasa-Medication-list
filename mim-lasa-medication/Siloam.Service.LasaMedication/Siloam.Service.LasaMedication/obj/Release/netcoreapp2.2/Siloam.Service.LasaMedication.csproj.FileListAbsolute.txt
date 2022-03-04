@@ -1,0 +1,15 @@
+F:\Project Siloam\Lasa Medication\mim-lasa-medication\Siloam.Service.LasaMedication\Siloam.Service.LasaMedication\bin\Release\netcoreapp2.2\appsettings.Development.json
+F:\Project Siloam\Lasa Medication\mim-lasa-medication\Siloam.Service.LasaMedication\Siloam.Service.LasaMedication\bin\Release\netcoreapp2.2\appsettings.json
+F:\Project Siloam\Lasa Medication\mim-lasa-medication\Siloam.Service.LasaMedication\Siloam.Service.LasaMedication\bin\Release\netcoreapp2.2\Siloam.Service.LasaMedication.deps.json
+F:\Project Siloam\Lasa Medication\mim-lasa-medication\Siloam.Service.LasaMedication\Siloam.Service.LasaMedication\bin\Release\netcoreapp2.2\Siloam.Service.LasaMedication.runtimeconfig.json
+F:\Project Siloam\Lasa Medication\mim-lasa-medication\Siloam.Service.LasaMedication\Siloam.Service.LasaMedication\bin\Release\netcoreapp2.2\Siloam.Service.LasaMedication.runtimeconfig.dev.json
+F:\Project Siloam\Lasa Medication\mim-lasa-medication\Siloam.Service.LasaMedication\Siloam.Service.LasaMedication\bin\Release\netcoreapp2.2\Siloam.Service.LasaMedication.dll
+F:\Project Siloam\Lasa Medication\mim-lasa-medication\Siloam.Service.LasaMedication\Siloam.Service.LasaMedication\bin\Release\netcoreapp2.2\Siloam.Service.LasaMedication.pdb
+F:\Project Siloam\Lasa Medication\mim-lasa-medication\Siloam.Service.LasaMedication\Siloam.Service.LasaMedication\obj\Release\netcoreapp2.2\Siloam.Service.LasaMedication.csproj.AssemblyReference.cache
+F:\Project Siloam\Lasa Medication\mim-lasa-medication\Siloam.Service.LasaMedication\Siloam.Service.LasaMedication\obj\Release\netcoreapp2.2\Siloam.Service.LasaMedication.GeneratedMSBuildEditorConfig.editorconfig
+F:\Project Siloam\Lasa Medication\mim-lasa-medication\Siloam.Service.LasaMedication\Siloam.Service.LasaMedication\obj\Release\netcoreapp2.2\Siloam.Service.LasaMedication.AssemblyInfoInputs.cache
+F:\Project Siloam\Lasa Medication\mim-lasa-medication\Siloam.Service.LasaMedication\Siloam.Service.LasaMedication\obj\Release\netcoreapp2.2\Siloam.Service.LasaMedication.AssemblyInfo.cs
+F:\Project Siloam\Lasa Medication\mim-lasa-medication\Siloam.Service.LasaMedication\Siloam.Service.LasaMedication\obj\Release\netcoreapp2.2\Siloam.Service.LasaMedication.csproj.CoreCompileInputs.cache
+F:\Project Siloam\Lasa Medication\mim-lasa-medication\Siloam.Service.LasaMedication\Siloam.Service.LasaMedication\obj\Release\netcoreapp2.2\Siloam.Service.LasaMedication.dll
+F:\Project Siloam\Lasa Medication\mim-lasa-medication\Siloam.Service.LasaMedication\Siloam.Service.LasaMedication\obj\Release\netcoreapp2.2\Siloam.Service.LasaMedication.pdb
+F:\Project Siloam\Lasa Medication\mim-lasa-medication\Siloam.Service.LasaMedication\Siloam.Service.LasaMedication\obj\Release\netcoreapp2.2\Siloam.Service.LasaMedication.genruntimeconfig.cache
